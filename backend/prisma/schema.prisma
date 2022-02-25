@@ -15,7 +15,7 @@ model Post {
   title       String
   emoji       String?
   type        String
-  thumbnail   String?   @map("thumbnail_url")
+  thumbnailUrl   String?   @map("thumbnail_url")
   excerpt     String?
   contentPath String    @unique @map("content_path")
   mb5Hash     String    @map("mb5_hash")
