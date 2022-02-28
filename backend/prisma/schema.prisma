@@ -11,19 +11,19 @@ datasource db {
 }
 
 model Post {
-  id          String    @id @default(uuid())
-  title       String
-  emoji       String?
-  type        String
-  thumbnailUrl   String?   @map("thumbnail_url")
-  excerpt     String?
-  contentPath String    @unique @map("content_path")
-  mb5Hash     String    @map("mb5_hash")
-  published   Boolean?  @default(false)
-  publishDate DateTime? @map("publish_date")
-  like        Int       @default(0)
-  createdAt   DateTime  @default(now()) @map("created_at")
-  updatedAt   DateTime  @default(now()) @map("updated_at")
+  id           String    @id @default(uuid())
+  title        String
+  emoji        String?
+  type         String
+  thumbnailUrl String?   @map("thumbnail_url")
+  excerpt      String?
+  contentPath  String    @unique @map("content_path")
+  mb5Hash      String    @map("mb5_hash")
+  published    Boolean?  @default(false)
+  publishDate  DateTime? @map("publish_date")
+  like         Int       @default(0)
+  createdAt    DateTime  @default(now()) @map("created_at")
+  updatedAt    DateTime  @default(now()) @map("updated_at")
 
   @@index([contentPath])
   @@map("posts")
